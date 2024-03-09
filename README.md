@@ -10,7 +10,7 @@ P.S 2: Use tools that will help you monitor the difference between requests and 
 #### Mid Level:
 - ✅ Eager Loading and N+1 Query Problem (10/10)
 - ✅ Eloquent Accessors and Mutators (10/10)
-- Try-Catch and Laravel Exceptions (10/10)
+- ✅ Try-Catch and Laravel Exceptions (10/10)
 - Customizing Error Pages and Messages (10/10)
 - Continuous Integration, Continuous Delivery (CI/CD) and Pipelines (10/10)
 - GitHub Actions (10/10)
