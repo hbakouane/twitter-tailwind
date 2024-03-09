@@ -16,6 +16,8 @@ use \Barryvdh\Debugbar\Facades\Debugbar;
 */
 
 Route::get('/', function () {
+    \App\Models\Book::factory()->create();
+
     Debugbar::startMeasure('render', 'Start querying now');
 
     $books = \App\Models\Book::limit(100)->get();
