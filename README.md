@@ -8,7 +8,7 @@ P.S 2: Use tools that will help you monitor the difference between requests and 
 
 ## Laravel
 #### Mid Level:
-- Eager Loading and N+1 Query Problem (10/10)
+- ✅ Eager Loading and N+1 Query Problem (10/10)
 - Eloquent Accessors and Mutators (10/10)
 - Try-Catch and Laravel Exceptions (10/10)
 - Customizing Error Pages and Messages (10/10)
