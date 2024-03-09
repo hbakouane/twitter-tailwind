@@ -13,6 +13,7 @@ P.S 2: Use tools that will help you monitor the difference between requests and 
 - Try-Catch and Laravel Exceptions (10/10)
 - Customizing Error Pages and Messages (10/10)
 - Continuous Integration, Continuous Delivery (CI/CD) and Pipelines (10/10)
+- GitHub Actions (10/10)
 - Custom Blade Directives (9/10)
 - Job Dispatching, Batching and Chaining (9/10)
 - Processing Failed Jobs (Become an expert) (9/10)
