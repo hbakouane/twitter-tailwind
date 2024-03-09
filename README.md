@@ -27,6 +27,7 @@ P.S 2: Use tools that will help you monitor the difference between requests and 
 - Get to know: Laravel Jetstream, Fortify, Scout, Dusk (8/10)
 - TDD: Test-Driven Development (8/10)
 - Mocking (8/10)
+- Laravel loggin (config/logging.php)
 
 #### Senior Level:
 - PHP/Laravel Design Patterns
