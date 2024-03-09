@@ -48,6 +48,11 @@ P.S 2: Use tools that will help you monitor the difference between requests and 
 ## PHP
 TO BE DONE.
 
+## Tools
+- Sentry
+- AWS
+- .....
+
 ## Sources to learn from: 
 https://codewithdre.com/ <br />
 LaravelDaily
