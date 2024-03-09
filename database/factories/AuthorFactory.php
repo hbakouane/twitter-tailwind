@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Exceptions\AuthorIsNotActiveException;
+use App\Models\Author;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,7 +21,8 @@ class AuthorFactory extends Factory
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->email,
-            'introduction' => $this->faker->text(400)
+            'introduction' => $this->faker->text(400),
+            'is_active' => $this->faker->boolean()
         ];
     }
 }
