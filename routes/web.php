@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Models\Author;
+use \Barryvdh\Debugbar\Facades\Debugbar;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    Debugbar::startMeasure('render', 'Start querying now');
+
+    $books = \App\Models\Book::limit(100)->get();
+
+    foreach ($books as $book) {
+        echo "Author of $book->title is " . $book->author->name;
+    }
+
+    Debugbar::stopMeasure('render', 'End now');
 });
