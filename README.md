@@ -46,8 +46,6 @@ P.S 2: Use tools that will help you monitor the difference between requests and 
 - Stability and Zero-Downtime Deployments
 - Performance Optimization and Caching
 - Writing Testable Code
-- Create millions of records (using factories) on an existing project (ERP) and optimize it
-- Integrate the tools mentionned below in your projects and get used to using them
 
 ## PHP
 TO BE DONE.
@@ -56,6 +54,11 @@ TO BE DONE.
 - Sentry
 - AWS
 - .....
+
+## Practical 
+- Create millions of records (using factories) on an existing project (ERP) and optimize it
+- Integrate the tools mentionned below in your projects and get used to using them
+- Send emails to 100s of thousands of users daily and deal with Queues and SMTP problems
 
 ## Sources to learn from: 
 https://codewithdre.com/ <br />
