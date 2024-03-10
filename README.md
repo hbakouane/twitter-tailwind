@@ -35,6 +35,7 @@ P.S 2: Use tools that will help you monitor the difference between requests and 
 - Structural Design Patterns
 - Behavioral Design Patterns
 - SOLID Code
+- KISS principle
 - Scalable Code
 - Maintainable Code
 - Best Practices and Standards
@@ -45,6 +46,8 @@ P.S 2: Use tools that will help you monitor the difference between requests and 
 - Stability and Zero-Downtime Deployments
 - Performance Optimization and Caching
 - Writing Testable Code
+- Create millions of records (using factories) on an existing project (ERP) and optimize it
+- Integrate the tools mentionned below in your projects and get used to using them
 
 ## PHP
 TO BE DONE.
