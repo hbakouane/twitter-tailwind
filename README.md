@@ -59,6 +59,7 @@ TO BE DONE.
 - Create millions of records (using factories) on an existing project (ERP) and optimize it
 - Integrate the tools mentionned below in your projects and get used to using them
 - Send emails to 100s of thousands of users daily and deal with Queues and SMTP problems
+- Have a search bar that searches through at least 6 tables, each one has millions of records
 
 ## Sources to learn from: 
 https://codewithdre.com/ <br />
