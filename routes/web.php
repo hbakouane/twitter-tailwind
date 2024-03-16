@@ -15,16 +15,5 @@ use \Barryvdh\Debugbar\Facades\Debugbar;
 |
 */
 
-Route::get('/', function () {
-    \App\Models\Book::factory()->create();
-
-    Debugbar::startMeasure('render', 'Start querying now');
-
-    $books = \App\Models\Book::limit(100)->get();
-
-    foreach ($books as $book) {
-        echo "Author of $book->title is " . $book->author->name;
-    }
-
-    Debugbar::stopMeasure('render', 'End now');
-});
+Route::get('/', [\App\Http\Controllers\Books\SearchBooksController::class, 'showSearchForm']);
+Route::post('/search', [\App\Http\Controllers\Books\SearchBooksController::class, 'search']);

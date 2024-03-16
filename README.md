@@ -1,66 +1,12 @@
-# my-senior-dev-path
-Skills and knowledge I lack to become a senior developer:
+## Take-away:
 
-[Roadmap Source](https://github.com/LaravelDaily/Laravel-Roadmap-Learning-Path)
-
-P.S 1: the bigger the (?/10), the sooner that thing has to be learnt.
-P.S 2: Use tools that will help you monitor the difference between requests and codes.
-
-## Laravel
-#### Mid Level:
-- ✅ Eager Loading and N+1 Query Problem (10/10)
-- ✅ Eloquent Accessors and Mutators (10/10)
-- ✅ Try-Catch and Laravel Exceptions (10/10)
-- ✅ Customizing Error Pages and Messages (10/10)
-- Continuous Integration, Continuous Delivery (CI/CD) and Pipelines (10/10)
-- GitHub Actions (10/10)
-- Custom Blade Directives (9/10)
-- Job Dispatching, Batching and Chaining (9/10)
-- Processing Failed Jobs (Become an expert) (9/10)
-- Soft Deletes (8/10)
-- Authorization: Roles/Permissions, Gates, Policies (8/10)
-- Drivers and Disks, Example of Amazon S3 (8/10)
-- Automated Testing with PHPUnit (Check LaravelDaily course maybe?) (8/10)
-- Configure Testing Database and Test CRUD Operations (8/10)
-- Real-time: Broadcasting, Echo and Pusher (8/10)
-- Generate API Documentation (8/10)
-- Get to know: Laravel Jetstream, Fortify, Scout, Dusk (8/10)
-- TDD: Test-Driven Development (8/10)
-- Mocking (8/10)
-- Laravel loggin (config/logging.php)
-
-#### Senior Level:
-- PHP/Laravel Design Patterns
-- Creational Design Patterns
-- Structural Design Patterns
-- Behavioral Design Patterns
-- SOLID Code
-- KISS principle
-- Scalable Code
-- Maintainable Code
-- Best Practices and Standards
-- Large Database Structures
-- NoSQL Solutions
-- Eloquent/SQL Query Optimization
-- Scaling to Multiple Databases
-- Stability and Zero-Downtime Deployments
-- Performance Optimization and Caching
-- Writing Testable Code
-
-## PHP
-TO BE DONE.
-
-## Tools
-- Sentry
-- AWS
-- .....
-
-## Practical 
-- Create millions of records (using factories) on an existing project (ERP) and optimize it
-- Integrate the tools mentionned below in your projects and get used to using them
-- Send emails to 100s of thousands of users daily and deal with Queues and SMTP problems
-- Have a search bar that searches through at least 6 tables, each one has millions of records
-
-## Sources to learn from: 
-https://codewithdre.com/ <br />
-LaravelDaily
+- The models data have to be imported to the search engine indexes through one way of the two
+  <br /> <br /> run the command: `php artisan scout:import`
+  <br /> <br /> set up a queue for Scout in `config/scout.php` and run it using `php artisan redis queue:work (--queue=scout)`
+- We can delete the imported data of a model by using the following command `php artisan scout:flush`
+- Note that the queue job updates and syncs record in every interaction with the database, when the `scout:import` command doesn't do that 
+<br /><br />
+- It's better to use one of the services (Algolia, Milleisearch ...) but for local testing we can use just the database driver, note that the collection driver doesn't provide a good approach to search through records, it uses just the WHERE LIKE closure, the other ones are sofisticated, they use prefix, full-text based indexing...
+- We can specify which approach to use while filtering through [#PHP attributes] https://laravel.com/docs/11.x/scout#database-engine
+  <br /><br />
+- We can import models along with their relationships using a method called `makeAllSearchableUsing(Builder $query) $query->with('relationship');` but we have to note that those relationships are not accessible in the queue job, because a job serializes just the model, not its relationships as well https://laravel.com/docs/11.x/queues#handling-relationships 
