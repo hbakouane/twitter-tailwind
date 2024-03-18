@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FontAwesome CSS -->
+    <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="./src/css/output/main.css">
+
+    <title>Home – Twitter</title>
+</head>
+<body>
+    <div class="wrapper bg-white">
+        <div class="flex justify-center">
+            <div class="w-2/12 flex">
+                <div class="fixed">
+                    <!-- LOGO -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="logo ml-6 my-3 p-2 cursor-pointer rounded-full hover:bg-gray-100 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-18jsvk2 r-16y2uox r-8kz0gk">
+                        <g>
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </g>
+                    </svg>
+                    <!-- / LOGO -->
+
+                    <!-- List -->
+                    <ul>
+                        <li class="py-3 w-full">
+                            <a href="#" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fa fa-home mr-6 w-1/12"></i>
+                                <span class="w-11/12 font-bold">Home</span>
+                            </a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="#" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fa fa-search mr-6 w-1/12"></i>
+                                <span class="w-11/12">Explore</span>
+                            </a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="#" id="notifications-li" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fa fa-bell mr-6 w-1/12"></i>
+                                <span class="w-11/12">Notifications</span>
+                            </a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="#" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fa fa-envelope mr-6 w-1/12"></i>
+                                <span class="w-11/12">Messages</span>
+                            </a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="#" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fas fa-list mr-6 w-1/12"></i>
+                                <span class="w-11/12">List</span>
+                            </a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="#" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fas fa-bookmark mr-6 w-1/12"></i>
+                                <span class="w-11/12">Bookmarks</span>
+                            </a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="#" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fa fa-users mr-6 w-1/12"></i>
+                                <span class="w-11/12">Communities</span>
+                            </a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="#" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fa fa-crown mr-6 w-1/12"></i>
+                                <span class="w-11/12">Premium</span>
+                            </a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="#" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fa fa-user mr-6 w-1/12"></i>
+                                <span class="w-11/12">Profile</span>
+                            </a>
+                        </li>
+                        <li class="py-3 w-full">
+                            <a href="#" class="text-xl hover:bg-gray-100 rounded-full py-4 px-7 w-full">
+                                <i class="fa fa-ellipsis mr-6 w-1/12"></i>
+                                <span class="w-11/12">More</span>
+                            </a>
+                        </li>
+                        <li class="py-3">
+                            <button class="bg-blue-400 hover:bg-blue-500 transition text-white text-xl rounded-full w-full py-3 font-normal">Post</button>
+                        </li>
+                    </ul>
+                    <!-- / List -->
+                </div>
+            </div>
+            <div class="w-5/12 border-x">
+                <!-- For you | Following -->
+                <div class="flex border-b">
+                    <div class="w-6/12 flex justify-center pt-3 transition cursor-pointer hover:bg-gray-100">
+                        <p class="font-bold border-b-blue-500 border-b-2 w-fit pb-3">For you</p>
+                    </div>
+                    <div class="w-5/12 py-3 transition text-center cursor-pointer hover:bg-gray-100">
+                        <p class="text-gray-500 font-bold">Following</p>
+                    </div>
+                    <div class="w-1/12 my-auto text-center">
+                        <button>
+                            <i class="fa fa-gear text-gray-500 p-3 rounded-full hover:bg-gray-200"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- / For you | Following -->
+
+                <!-- What's happening -->
+                <div class="border-b flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <input class="border-0 pb-12 w-full text-xl placeholder:text-gray-500 focus:border-0" placeholder="What's happening?" />
+                        <hr>
+                        <div class="flex pt-3">
+                            <div class="w-6/12 my-auto">
+                                <ul>
+                                    <li class="inline-block pr-1">
+                                        <i class="fa fa-image transition text-blue-400 cursor-pointer hover:text-blue-500 p-2 rounded-full hover:bg-blue-100"></i>
+                                    </li>
+                                    <li class="inline-block pr-1">
+                                        <i class="fa fa-file transition text-blue-400 cursor-pointer hover:text-blue-500 p-2 px-3 rounded-full hover:bg-blue-100"></i>
+                                    </li>
+                                    <li class="inline-block pr-1">
+                                        <i class="fa fa-video transition text-blue-400 cursor-pointer hover:text-blue-500 p-2 rounded-full hover:bg-blue-100"></i>
+                                    </li>
+                                    <li class="inline-block pr-1">
+                                        <i class="fa fa-face-smile transition text-blue-400 cursor-pointer hover:text-blue-500 p-2 rounded-full hover:bg-blue-100"></i>
+                                    </li>
+                                    <li class="inline-block pr-1">
+                                        <i class="fa fa-map transition text-blue-400 cursor-pointer hover:text-blue-500 p-2 rounded-full hover:bg-blue-100"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-6/12 text-end">
+                                <button class="bg-blue-400 hover:bg-blue-500 transition text-white text-lg px-4 py-1 rounded-full font-normal">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / What's happening -->
+
+                <!-- Show More Posts -->
+                <div id="show-more-posts" class="hidden cursor-pointer transition hover:bg-gray-100 border-b py-3 text-center">
+                    <a href="#" class="text-blue-500">Show 1,204 posts</a>
+                </div>
+                <!-- / Show More Posts -->
+
+                <!-- Posts -->
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                Hey, I just made this page using <a href="#" class="font-medium text-blue-400">@Tailwind</a>. <br />
+                                Did you know that this project has 27 lines of CSS? Literally. <br />
+                                Utility classes are so useful. <br />
+                                I'm never going back to Bootstrap FYI.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(./src/images/rodeo-cover.jpeg);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Travis Scott</span>
+                                    <span class="text-sm text-gray-400">@trvisXX · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                WHEN THE NIGHT CALLLLLSSSSSSSSSSS
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                Checkout my portfolio <a href="https://hbakouane.dev" class="font-medium text-blue-400">https://hbakouane.dev</a>
+                            </p>
+                            <img src="./src/images/portfolio.png" class="w-full my-2 transition hover:opacity-90" loading="lazy">
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-b transition cursor-pointer hover:bg-gray-100 flex px-5 pt-5 pb-4">
+                    <div class="w-1/12">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                    </div>
+                    <div class="w-11/12 pl-1">
+                        <div class="flex">
+                            <div class="w-11/12">
+                                <p>
+                                    <span class="font-bold">Haytam Bakouane</span>
+                                    <span class="text-sm text-gray-400">@haytam_bakouane · 13h</span>
+                                </p>
+                            </div>
+                            <div class="w-1/12">
+                                <i class="fa fa-ellipsis px-2 py-1 cursor-pointer rounded-full text-gray-500 hover:bg-gray-200"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="text-sm mt-0 pt-0">
+                                BMW M4 is my favourite coupé, M5 my favourite sedan.
+                            </p>
+                        </div>
+                        
+                        <div class="flex pt-1 px-0">
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="far fa-comment"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-green-500">
+                                    <i class="fas fa-share-nodes"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-pink-400">
+                                    <i class="far fa-heart"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                            <div class="w-3/12">
+                                <button class="text-gray-600 transition hover:text-blue-400">
+                                    <i class="fas fa-chart-simple"></i>
+                                    <span class="text-sm">2.2K</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Posts -->
+            </div>
+            <div class="w-3/12">
+                <div id="sidebar" class="pl-6 mt-3 pb-10">
+                    <!-- Search Bar -->
+                    <div>
+                        <input type="text" placeholder="Search" class="bg-gray-100 text-gray-600 focus:border-0 rounded-full w-full py-2 pl-6 placeholder:text-gray-400">
+                    </div>
+                    <!-- / Search Bar -->
+
+                    <!-- Subscribe CTA -->
+                    <div class="rounded-xl bg-gray-100 p-5 mt-5">
+                        <p class="text-black font-bold text-xl">Subscribe to Premium</p>
+                        <p class="mt-2">Subscribe to unlock new features and if eligible, receive a share of ads revenue.</p>
+                        <button class="rounded-full bg-black font-bold text-white px-4 py-2 mt-3">Subscribe</button>
+                    </div>
+                    <!-- / Subscribe CTA -->
+
+                    <!-- Trends -->
+                    <div class="rounded-xl bg-gray-100 mt-5 pt-1 pb-5">
+                        <p class="text-black font-bold m-5 text-xl mb-3">Trends for you</p>
+                        <div class="transition hover:bg-gray-200 hover:cursor-pointer px-5 py-2">
+                            <div class="flex">
+                                <div class="w-10/12">
+                                    <p class="text-gray-500 text-sm">Trending</p>
+                                    <p class="text-black font-bold text-sm">#SoftwareEngineering</p>
+                                </div>
+                                <div class="w-2/12 flex my-auto">
+                                    <button class="transition rounded-full px-3 py-1 hover:bg-gray-300">
+                                        <i class="fa fa-ellipsis"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transition hover:bg-gray-200 hover:cursor-pointer px-5 py-2">
+                            <div class="flex">
+                                <div class="w-10/12">
+                                    <p class="text-gray-500 text-sm">Sports – Trending</p>
+                                    <p class="text-black font-bold text-sm">Xavi</p>
+                                    <p class="text-gray-500 text-sm">88.3K posts</p>
+                                </div>
+                                <div class="w-2/12 flex my-auto">
+                                    <button class="transition rounded-full px-3 py-1 hover:bg-gray-300">
+                                        <i class="fa fa-ellipsis"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transition hover:bg-gray-200 hover:cursor-pointer px-5 py-2">
+                            <div class="flex">
+                                <div class="w-10/12">
+                                    <p class="text-gray-500 text-sm">Trending in Morocco</p>
+                                    <p class="text-black font-bold text-sm text-end">مراكش</p>
+                                </div>
+                                <div class="w-2/12 flex my-auto">
+                                    <button class="transition rounded-full px-3 py-1 hover:bg-gray-300">
+                                        <i class="fa fa-ellipsis"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transition hover:bg-gray-200 hover:cursor-pointer px-5 py-2">
+                            <div class="flex">
+                                <div class="w-10/12">
+                                    <p class="text-gray-500 text-sm">Trending</p>
+                                    <p class="text-black font-bold text-sm">#SoftwareEngineering</p>
+                                </div>
+                                <div class="w-2/12 flex my-auto">
+                                    <button class="transition rounded-full px-3 py-1 hover:bg-gray-300">
+                                        <i class="fa fa-ellipsis"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transition hover:bg-gray-200 hover:cursor-pointer px-5 py-2">
+                            <div class="flex">
+                                <div class="w-10/12">
+                                    <p class="text-gray-500 text-sm">Sports – Trending</p>
+                                    <p class="text-black font-bold text-sm">Xavi</p>
+                                    <p class="text-gray-500 text-sm">88.3K posts</p>
+                                </div>
+                                <div class="w-2/12 flex my-auto">
+                                    <button class="transition rounded-full px-3 py-1 hover:bg-gray-300">
+                                        <i class="fa fa-ellipsis"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="transition hover:bg-gray-200 hover:cursor-pointer px-5 py-2">
+                            <div class="flex">
+                                <div class="w-10/12">
+                                    <p class="text-gray-500 text-sm">Trending in Morocco</p>
+                                    <p class="text-black font-bold text-sm text-end">بريطانيا</p>
+                                </div>
+                                <div class="w-2/12 flex my-auto">
+                                    <button class="transition rounded-full px-3 py-1 hover:bg-gray-300">
+                                        <i class="fa fa-ellipsis"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Trends -->
+                </div>
+            </div>
+        </div>
+
+        <div id="messages-holder" onclick="showMessages(this)" class="cursor-pointer">
+            <div class="bg-white flex transition shadow px-5 pt-2 pb-0 rounded-tr-xl rounded-tl-xl">
+                <div class="w-9/12">
+                    <p class="text-xl font-bold">Messages</p>
+                </div>
+                <div class="w-3/12 text-end">
+                    <button onclick="showMessages(this)" id="display-control-btn" class="text-xl transition font-bold px-2 py-1 rounded-full hover:bg-gray-200">
+                        <i class="fa fa-chevron-up"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="messages" class="bg-white shadow">
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Hey man, are you ready for our tomorrow's meeting?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">This design is siiicckkk!!!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="flex py-3 px-5 cursor-pointer transition hover:bg-gray-100">
+                    <div class="w-11/12 flex">
+                        <div class="profile-img rounded-full" style="background-image: url(https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=);"></div>
+                        <div class="w-full">
+                            <div class="flex">
+                                <p class="text-black text-sm ml-1 font-bold">Yassin Elb</p>
+                                <p class="text-gray-600 text-sm ml-1">@yassine_elb · Mar 4</p>
+                            </div>
+                            <div class="w-12/12">
+                                <p class="text-gray-600 text-sm ml-1 w-full">Did you see my yesterday's message?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/12">
+                        <i class="fa fa-ellipsis"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let messagesHolder = document.querySelector('#messages')
+        let controlBtn = document.querySelector('#display-control-btn')
+        let controlBtnIcon = controlBtn.querySelector('i')
+        let notificationsLi = document.querySelector('#notifications-li')
+
+        let showMessages = el => {
+            messagesHolder.style.height = "335px"
+
+            controlBtnIcon.classList.remove('fa-chevron-up')
+            controlBtnIcon.classList.add('fa-chevron-down')
+            el.setAttribute('onclick', 'hideMessages(this)')
+        }
+
+        let hideMessages = el => {
+            messagesHolder.style.height = "0px"
+
+            controlBtnIcon.classList.remove('fa-chevron-down')
+            controlBtnIcon.classList.add('fa-chevron-up')
+            el.setAttribute('onclick', 'showMessages(this)')
+        }
+
+        setTimeout(() => {
+            document.querySelector('#show-more-posts').classList.remove('hidden')
+            notificationsLi.classList.add('transition', 'hover:bg-blue-50', 'text-blue-500')
+            notificationsLi.classList.remove('hover:bg-gray-100')
+            notificationsLi.querySelector('span').textContent += '•'
+        }, 2000)
+    </script>
+</body>
+</html>

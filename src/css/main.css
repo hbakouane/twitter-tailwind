@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo {
+    height: 40px;
+}
+
+#messages-holder {
+    position: fixed;
+    bottom: 0;
+    right: 2%;
+    width: 25%;
+}
+
+#messages-holder #messages {
+    height: 0px;
+    transition: .3s;
+    overflow-y: scroll;
+}
+
+.profile-img {
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+}
+
+#messages .profile-img {
+    height: 40px;
+    width: 45px;
+    background-size: cover;
+}
+
+#sidebar {
+    position: sticky;
+    top: 0;
+}
