@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    overflow-x: hidden;
+}
+
 .logo {
     height: 40px;
 }
@@ -34,4 +38,30 @@
 #sidebar {
     position: sticky;
     top: 0;
+}
+
+@media screen and (max-width: 1430px) {
+    #messages-holder {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 1290px) {
+    #messages-holder {
+        width: 35%;
+    }
+}
+@media screen and (max-width: 924px) {
+    #messages-holder {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 704px) {
+    #messages-holder {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 660px) {
+    #messages-holder {
+        width: 70%;
+    }
 }
